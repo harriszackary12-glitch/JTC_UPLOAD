@@ -1,0 +1,190 @@
+/* Light Mode Styles */
+.light-mode {
+  --lm-bg-overlay: rgba(255,255,255,0.85);
+  --lm-surface: #ffffff;
+  --lm-surface-2: #f6f8f7;
+  --lm-text: #0f1720;
+  --lm-muted: #546069;
+  --lm-accent: #2d6a4f;
+  --lm-accent-strong: #1b4332;
+  --lm-danger: #b00020;
+  --lm-border: rgba(15,23,32,0.06);
+}
+
+.light-mode h5 {
+  color: var(--lm-text) !important;
+}
+
+.light-mode body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url(../images/trees.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(4px) brightness(0.92) saturate(0.95);
+    transform: scale(1.05);
+    z-index: -1;
+    background-color: var(--lm-bg-overlay);
+}
+
+.light-mode .navbar {
+
+    margin: 20px !important;
+    width: auto !important;
+    border-radius: 15px !important;
+
+    background-color: rgba(255,255,255,0.95) !important;
+    border: 1px solid var(--lm-border);
+}
+
+.light-mode .login-container {
+    background-color: var(--lm-surface) !important;
+    padding: 28px !important;
+}
+
+.light-mode h2, .light-mode h5, .light-mode .card-title, .light-mode label {
+    color: var(--lm-text) !important;
+    font-weight: 600;
+}
+.light-mode p, .light-mode small, .light-mode .text-muted {
+    color: var(--lm-muted) !important;
+}
+
+.light-mode .form-control,
+.light-mode .form-select {
+    background-color: var(--lm-surface-2) !important;
+    color: var(--lm-text) !important;
+    border: 1px solid var(--lm-border) !important;
+    border-radius: 8px;
+    padding: 0.48rem 0.7rem;
+    box-shadow: none;
+}
+.light-mode .form-control::placeholder { color: #8d9999; }
+.light-mode .form-control:focus,
+.light-mode .form-select:focus {
+    border-color: var(--lm-accent) !important;
+    box-shadow: 0 0 0 0.12rem rgba(45,106,79,0.12) !important;
+    outline: none;
+}
+
+.light-mode #product-details,
+.light-mode .product-detail,
+.light-mode .list-group-item,
+.light-mode .booking-item {
+    color: var(--lm-text) !important;
+    background-color: transparent !important;
+    border-color: rgba(15,23,32,0.03) !important;
+}
+
+.light-mode .list-group-item.booking-item {
+  background-color: #ffffff;
+  border: 1px solid rgba(15,23,32,0.04);
+  color: var(--lm-text) !important;
+}
+.light-mode .list-group-item.booking-item .fw-bold { color: var(--lm-text) !important; }
+.light-mode .list-group-item.booking-item small { color: var(--lm-muted) !important; }
+
+.light-mode .btn-primary {
+    background-color: var(--lm-accent) !important;
+    border-color: var(--lm-accent-strong) !important;
+    color: #fff !important;
+}
+.light-mode .btn-outline-secondary {
+    color: var(--lm-text);
+    border-color: rgba(15,23,32,0.06);
+    background-color: transparent;
+}
+.light-mode .btn-outline-danger { color: var(--lm-danger); border-color: rgba(176,0,32,0.12); }
+
+.light-mode .badge {
+    background-color: rgba(15,23,32,0.06) !important;
+    color: var(--lm-text) !important;
+}
+
+.light-mode a { color: var(--lm-accent) !important; }
+.light-mode a:hover { color: var(--lm-accent-strong) !important; text-decoration: underline; }
+
+.light-mode .navbar .navbar-brand,
+.light-mode .navbar .nav-link,
+.light-mode .navbar .navbar-text,
+.light-mode .navbar .btn {
+  color: var(--lm-text) !important;
+  font-weight: 600;
+  text-shadow: none !important;
+}
+
+.light-mode .product-detail strong,
+.light-mode #product-details strong {
+  color: var(--lm-accent-strong) !important;
+  font-weight: 700;
+}
+
+.light-mode .booking-item[data-status="Cancelled"] {
+  background-color: rgba(176, 0, 32, 0.04) !important;
+  border-color: rgba(176, 0, 32, 0.08) !important;
+  color: #3a1b1b !important;
+}
+
+.light-mode .booking-item[data-status="Cancelled"] .badge {
+  background-color: rgba(176, 0, 32, 0.12) !important;
+  color: #6b0f16 !important;
+  border: 1px solid rgba(176, 0, 32, 0.15) !important;
+}
+
+.light-mode .booking-item[data-status="Cancelled"] .btn,
+.light-mode .booking-item[data-status="Cancelled"] .btn-outline-danger {
+  color: #6b0f16 !important;
+  border-color: rgba(176,0,32,0.12) !important;
+}
+
+.light-mode nav.navbar .nav-link,
+.light-mode nav.navbar .navbar-brand {
+  color: var(--lm-text) !important;
+}
+
+.error {
+    background-color: rgba(255, 107, 107, 0.3);
+    color: #ff8a8a;
+    padding: 12px;
+    border-left: 4px solid #771111;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.toggle-cancelled {
+  background-color: var(--lm-surface-2) !important;
+  color: var(--lm-text) !important;
+}
+
+.light-mode .list-group {
+  background-color: transparent;
+}
+
+.light-mode .list-group-item {
+  background-color: #f9fafb !important;
+  color: var(--lm-text) !important;
+  border: 1px solid rgba(15, 23, 32, 0.05) !important;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+}
+
+.light-mode .list-group-item:last-child {
+  margin-bottom: 0;
+}
+
+.light-mode .list-group-item span {
+  color: var(--lm-text) !important;
+}
+
+.light-mode .list-group-item span:first-child {
+  font-weight: 600;
+  color: var(--lm-accent) !important;
+}
+
+.light-mode .list-group-item span:last-child {
+  color: var(--lm-muted) !important;
+  font-size: 0.9rem;
+}
